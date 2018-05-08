@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Login</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body background="login1.jpg">
+     
+<div class="container">
+<div class="main">
+<h2>Railway Reservation Login</h2>
+<form id="form_id" method="post" name="myform" action="home.html">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+<a href="#" onclick="newUser()">New User? Register here</a>
+</div>
+</div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  console.log('firebase load');
+  var config = {
+    apiKey: "AIzaSyBaKOd6RYcJCbPhaygEZnZV15yV4OXdSeM",
+    authDomain: "railwayreservation-8d47d.firebaseapp.com",
+    databaseURL: "https://railwayreservation-8d47d.firebaseio.com",
+    projectId: "railwayreservation-8d47d",
+    storageBucket: "",
+    messagingSenderId: "224835208212"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/index.js"></script>
+</html>

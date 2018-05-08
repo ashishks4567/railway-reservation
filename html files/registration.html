@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Registration</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="../css/style.css"/>
+<!--Includes javascript file -->
+<script src="../js/registration.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  console.log('firebase load');
+  var config = {
+    apiKey: "AIzaSyBaKOd6RYcJCbPhaygEZnZV15yV4OXdSeM",
+    authDomain: "railwayreservation-8d47d.firebaseapp.com",
+    databaseURL: "https://railwayreservation-8d47d.firebaseio.com",
+    projectId: "railwayreservation-8d47d",
+    storageBucket: "",
+    messagingSenderId: "224835208212"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<h2>User Registration</h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>EmailId :</label>
+<input type="text" name="username" id="emailId"/>
+<label>Mobile No :</label>
+<input type="text" name="mobileno" id="mobileno"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<label>Confirm Password :</label>
+<input type="password" name="cpassword" id="cpassword"/>
+<input type="button" value="Login" id="submit" onclick="userRegistration()"/>
+</form>
+</div>
+</div>
+</body>
+</html>

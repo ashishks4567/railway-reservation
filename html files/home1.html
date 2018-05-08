@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>railway reservation form </title>
+    </head>
+    <body bgcolor="#E6E6FA">
+        <!-- Include CSS File Here -->
+<link rel="stylesheet" href="../css/navbarHome.css"/>
+
+<script src="../js/home.js"></script>
+
+            <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li style="float:right"><a href="#" onClick="logoutUser()">logout</a></li>
+            </ul>
+            <br><br>
+    <form name="railway">
+        <center>
+       
+     <table>
+     <tr>
+         <td>From Station:</td>
+         <td><select id="fromStation">
+                <option style="display:none;"></option>
+                <option value="mumbai">mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="kolkata">kolkata</option>
+                <option value="chennai">chennai</option>
+             </select>
+        </td>
+     </tr>
+     <tr>
+        <td>To Station:</td>
+                <td><select id="toStation">
+                <option style="display:none;"></option>
+                <option value="pune">pune</option>
+                 <option value="bangalore">bangalore</option>
+                <option value="indore">indore</option>
+                <option value="gwalior">gwalior</option>
+            </select>
+         </td>  
+     </tr>
+    <tr>
+        <td>Class:</td>
+                <td><select id="class">
+                <option value="general">general</option>
+                <option value="sleeper">Sleeper</option>
+                <option value="ac3">AC3</option>
+                <option value="ac2">AC2</option>
+                <option value="ac1">AC1</option>
+             </select>
+        </td>
+    </tr>
+        <tr>
+            <td>Date:</td>
+             <td><input type="date" id="date"></td>
+        </tr> 
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="" id="name"></td></tr>
+         <tr>
+            <td>Age:</td>
+            <td><input type="number" id="age"></td>
+         </tr> 
+         <tr>
+             <td>Email:</td>
+            <td><input type="email" id="email"></td>
+        </tr> 
+         <tr>
+            <td>Mobile No:</td>
+            <td><input type="number" id="mobileNo"></td>
+         </tr> 
+          <tr>
+             <td>Payment options:</td>
+             <td><select id="payment">
+                    <option value="dc">debit card</option>
+                    <option value="cc">credit card</option>
+                    <option value="wallet">wallet</option>
+                    <option value="ib">internet banking</option>
+            </select>
+            </td>
+            
+        <tr>
+           <td><input type="button" value="submit" onClick="registeredUser()"></td>
+           <td><input type="reset" value="Cancel"></td>
+        </tr>  
+     </table>
+     <br><br>  
+         <div id="trainDetail"  style="display:none;">
+                <table border="1">
+                <tr>
+                <td >Train No</td>
+                <td >Train Name</td>
+                <td >Starting place</td>
+                <td>Destination Place</td>
+                <td >Fare</td>
+                <td >Arrival Time</td>
+                <td >Departure Time</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>123</td>   
+                <td>abc exp</td>
+                <td id="r1">mumbai</td>
+                <td id="r2">pune</td>
+                <td >500 Rs.</td>
+                <td >10 pm</td>
+                <td >08 am</td>
+                <td><a href="#" onClick="bookTicket()">book</a></td>
+                </tr>
+                </table>
+        </div> 
+
+
+        <div class="container" id="trainTicket"  style="display:none;" >
+                <link rel="stylesheet" href="../css/ticket.css"/>
+            <section>
+              <div class="left">
+                <div class="info">Railway Reservation Ticket</div><br>
+                <div class="info" id='fromTicket'>from: bangalore</div>
+                <div class="info" id='toTicket'>to Station: mumbai</div>
+                <div class="info">fare: 500Rs</div>
+                <div class="info">kms: 230kms</div>
+                <br><br>
+                <div class="info">Enjoy the Journey</div>
+              </div>
+              <div class="right">
+                <div class="seats">Class<span>3A</span></div>
+                <div class="seats">Arrival Time<span>10 pm</span></div>
+                <div class="seats">Depart Time<span>8 am</span></div>
+              </div>
+            </section>
+          </div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBaKOd6RYcJCbPhaygEZnZV15yV4OXdSeM",
+    authDomain: "railwayreservation-8d47d.firebaseapp.com",
+    databaseURL: "https://railwayreservation-8d47d.firebaseio.com",
+    projectId: "railwayreservation-8d47d",
+    storageBucket: "",
+    messagingSenderId: "224835208212"
+  };
+  firebase.initializeApp(config);
+</script>
+</html>
